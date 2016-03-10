@@ -1,0 +1,4 @@
+# for openstack Liberty, pushing this into 2.9.x will break some Ipv6 stuff
+# so we're sticking it at the 2.8.x versions, check https://bugs.launchpad.net/nova/+bug/1526413
+# for more information check https://github.com/openstack/requirements/blob/master/global-requirements.txt
+watchurl=https://pypi.python.org/simple/requests/ ../../packages/source/r/requests/requests-(2\.8\..*).tar.gz.*
