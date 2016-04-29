@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.8.1
-Release  : 20
+Release  : 21
 URL      : https://pypi.python.org/packages/source/r/requests/requests-2.8.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/r/requests/requests-2.8.1.tar.gz
 Summary  : Python HTTP for Humans.
