@@ -4,9 +4,9 @@
 #
 Name     : requests
 Version  : 2.10.0
-Release  : 24
-URL      : https://pypi.python.org/packages/49/6f/183063f01aae1e025cf0130772b55848750a2f3a89bfa11b385b35d7329d/requests-2.10.0.tar.gz
-Source0  : https://pypi.python.org/packages/49/6f/183063f01aae1e025cf0130772b55848750a2f3a89bfa11b385b35d7329d/requests-2.10.0.tar.gz
+Release  : 25
+URL      : http://pypi.debian.net/requests/requests-2.10.0.tar.gz
+Source0  : http://pypi.debian.net/requests/requests-2.10.0.tar.gz
 Summary  : Python HTTP for Humans.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -35,6 +35,7 @@ python components for the requests package.
 %setup -q -n requests-2.10.0
 
 %build
+export LANG=C
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
