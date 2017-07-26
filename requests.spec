@@ -5,20 +5,29 @@
 # Source0 file verified with key 0x70FE17F8A643E15B (lukasa@keybase.io)
 #
 Name     : requests
-Version  : 2.18.1
-Release  : 35
-URL      : http://pypi.debian.net/requests/requests-2.18.1.tar.gz
-Source0  : http://pypi.debian.net/requests/requests-2.18.1.tar.gz
-Source99 : http://pypi.debian.net/requests/requests-2.18.1.tar.gz.asc
+Version  : 2.18.2
+Release  : 36
+URL      : http://pypi.debian.net/requests/requests-2.18.2.tar.gz
+Source0  : http://pypi.debian.net/requests/requests-2.18.2.tar.gz
+Source99 : http://pypi.debian.net/requests/requests-2.18.2.tar.gz.asc
 Summary  : Python HTTP for Humans.
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: requests-python
+Requires: Sphinx
+Requires: alabaster
 Requires: certifi
 Requires: chardet
 Requires: cryptography
+Requires: docutils
+Requires: flake8
 Requires: idna
 Requires: pyOpenSSL
+Requires: pytest
+Requires: pytest-cov
+Requires: pytest-xdist
+Requires: setuptools
+Requires: tox
 Requires: urllib3
 BuildRequires : pbr
 BuildRequires : pip
@@ -27,10 +36,7 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 
 %description
-Requests: HTTP for Humans
 =========================
-.. image:: https://img.shields.io/pypi/v/requests.svg
-:target: https://pypi.python.org/pypi/requests
 
 %package python
 Summary: python components for the requests package.
@@ -41,14 +47,14 @@ python components for the requests package.
 
 
 %prep
-%setup -q -n requests-2.18.1
+%setup -q -n requests-2.18.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1497478921
+export SOURCE_DATE_EPOCH=1501029826
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -58,7 +64,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test_requests.py || :
 %install
-export SOURCE_DATE_EPOCH=1497478921
+export SOURCE_DATE_EPOCH=1501029826
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
