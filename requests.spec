@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x70FE17F8A643E15B (lukasa@keybase.io)
 #
 Name     : requests
-Version  : 2.18.3
-Release  : 37
-URL      : http://pypi.debian.net/requests/requests-2.18.3.tar.gz
-Source0  : http://pypi.debian.net/requests/requests-2.18.3.tar.gz
-Source99 : http://pypi.debian.net/requests/requests-2.18.3.tar.gz.asc
+Version  : 2.18.4
+Release  : 38
+URL      : http://pypi.debian.net/requests/requests-2.18.4.tar.gz
+Source0  : http://pypi.debian.net/requests/requests-2.18.4.tar.gz
+Source99 : http://pypi.debian.net/requests/requests-2.18.4.tar.gz.asc
 Summary  : Python HTTP for Humans.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -47,14 +47,14 @@ python components for the requests package.
 
 
 %prep
-%setup -q -n requests-2.18.3
+%setup -q -n requests-2.18.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1501687058
+export SOURCE_DATE_EPOCH=1503006313
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -64,7 +64,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test_requests.py || :
 %install
-export SOURCE_DATE_EPOCH=1501687058
+export SOURCE_DATE_EPOCH=1503006313
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
