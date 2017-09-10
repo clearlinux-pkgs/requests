@@ -1,0 +1,5 @@
+# This file contains recursive sources that require this package
+ceph-0:11.2.0-41.src
+gensim-0:2.3.0-7.src
+jupyter-notebook-gist-0:0.4.0-5.src
+smart_open-0:1.5.3-8.src
