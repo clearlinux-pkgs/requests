@@ -6,7 +6,7 @@
 #
 Name     : requests
 Version  : 2.18.4
-Release  : 40
+Release  : 41
 URL      : http://pypi.debian.net/requests/requests-2.18.4.tar.gz
 Source0  : http://pypi.debian.net/requests/requests-2.18.4.tar.gz
 Source99 : http://pypi.debian.net/requests/requests-2.18.4.tar.gz.asc
@@ -14,22 +14,11 @@ Summary  : Python HTTP for Humans.
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: requests-legacypython
+Requires: requests-python3
 Requires: requests-python
-Requires: Sphinx
-Requires: alabaster
 Requires: certifi
 Requires: chardet
-Requires: cryptography
-Requires: docutils
-Requires: flake8
 Requires: idna
-Requires: pyOpenSSL
-Requires: pytest
-Requires: pytest-cov
-Requires: pytest-xdist
-Requires: setuptools
-Requires: tox
-Requires: urllib3
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dev
@@ -51,9 +40,18 @@ legacypython components for the requests package.
 Summary: python components for the requests package.
 Group: Default
 Requires: requests-legacypython
+Requires: requests-python3
 
 %description python
 python components for the requests package.
+
+
+%package python3
+Summary: python3 components for the requests package.
+Group: Default
+
+%description python3
+python3 components for the requests package.
 
 
 %prep
@@ -64,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505365440
+export SOURCE_DATE_EPOCH=1506868162
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -74,7 +72,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test_requests.py || :
 %install
-export SOURCE_DATE_EPOCH=1505365440
+export SOURCE_DATE_EPOCH=1506868162
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -90,5 +88,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
