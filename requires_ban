@@ -13,5 +13,4 @@ pytest-cov
 pytest-xdist
 setuptools
 tox
-urllib3
 
