@@ -6,7 +6,7 @@
 #
 Name     : requests
 Version  : 2.18.4
-Release  : 51
+Release  : 52
 URL      : http://pypi.debian.net/requests/requests-2.18.4.tar.gz
 Source0  : http://pypi.debian.net/requests/requests-2.18.4.tar.gz
 Source99 : http://pypi.debian.net/requests/requests-2.18.4.tar.gz.asc
