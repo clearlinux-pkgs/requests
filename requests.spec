@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.19.1
-Release  : 58
+Release  : 59
 URL      : http://pypi.debian.net/requests/requests-2.19.1.tar.gz
 Source0  : http://pypi.debian.net/requests/requests-2.19.1.tar.gz
 Summary  : Python HTTP for Humans.
