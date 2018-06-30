@@ -4,13 +4,14 @@
 #
 Name     : requests
 Version  : 2.19.1
-Release  : 59
+Release  : 60
 URL      : http://pypi.debian.net/requests/requests-2.19.1.tar.gz
 Source0  : http://pypi.debian.net/requests/requests-2.19.1.tar.gz
 Summary  : Python HTTP for Humans.
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: requests-python3
+Requires: requests-license
 Requires: requests-python
 Requires: certifi
 Requires: chardet
@@ -18,6 +19,8 @@ Requires: idna
 Requires: urllib3
 BuildRequires : pbr
 BuildRequires : pip
+BuildRequires : python-core
+BuildRequires : python3-core
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
@@ -32,6 +35,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the requests package.
+
+
+%package license
+Summary: license components for the requests package.
+Group: Default
+
+%description license
+license components for the requests package.
 
 
 %package python
@@ -60,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1529699535
+export SOURCE_DATE_EPOCH=1530376969
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -70,8 +81,10 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test_requests.py || :
 %install
-export SOURCE_DATE_EPOCH=1529699535
+export SOURCE_DATE_EPOCH=1530376969
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/requests
+cp LICENSE %{buildroot}/usr/share/doc/requests/LICENSE
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -84,6 +97,10 @@ echo ----[ mark ]----
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/requests/LICENSE
 
 %files python
 %defattr(-,root,root,-)
