@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Sphinx
-astral
 ceph
 certbot
 gTTS-token
@@ -10,5 +9,6 @@ python-zeep
 requests-kerberos
 requests-mock
 requests-ntlm
+requests-oauthlib
 smart_open
 virt-manager

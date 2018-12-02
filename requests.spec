@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.20.1
-Release  : 66
+Release  : 67
 URL      : https://files.pythonhosted.org/packages/40/35/298c36d839547b50822985a2cf0611b3b978a5ab7a5af5562b8ebe3e1369/requests-2.20.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/40/35/298c36d839547b50822985a2cf0611b3b978a5ab7a5af5562b8ebe3e1369/requests-2.20.1.tar.gz
 Summary  : Python HTTP for Humans.
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541742964
+export SOURCE_DATE_EPOCH=1543749904
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -78,7 +78,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python test_requests.py || :
 %install
-export SOURCE_DATE_EPOCH=1541742964
+export SOURCE_DATE_EPOCH=1543749904
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/requests
 cp LICENSE %{buildroot}/usr/share/package-licenses/requests/LICENSE
