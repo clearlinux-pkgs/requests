@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.20.1
-Release  : 67
+Release  : 68
 URL      : https://files.pythonhosted.org/packages/40/35/298c36d839547b50822985a2cf0611b3b978a5ab7a5af5562b8ebe3e1369/requests-2.20.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/40/35/298c36d839547b50822985a2cf0611b3b978a5ab7a5af5562b8ebe3e1369/requests-2.20.1.tar.gz
 Summary  : Python HTTP for Humans.
