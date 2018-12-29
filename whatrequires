@@ -1,9 +1,13 @@
 # This file contains recursive sources that require this package
 Sphinx
+adal
+azure-servicebus
+azure-storage-common
 ceph
 certbot
 gTTS-token
 jupyter-notebook-gist
+locustio
 netdisco
 python-zeep
 requests-kerberos
