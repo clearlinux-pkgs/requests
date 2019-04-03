@@ -1,18 +1,26 @@
 # This file contains recursive sources that require this package
 Sphinx
 adal
-azure-servicebus
 azure-storage-common
 ceph
 certbot
+codecov
+conda
+deprecated-Sphinx
+docker-compose
 gTTS-token
+hammock
 jupyter-notebook-gist
 locustio
 netdisco
+pyecobee
+python-swiftclient
 python-zeep
 requests-kerberos
 requests-mock
 requests-ntlm
 requests-oauthlib
+responses
 smart_open
 virt-manager
+yarg
