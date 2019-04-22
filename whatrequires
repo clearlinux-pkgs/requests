@@ -22,5 +22,6 @@ requests-ntlm
 requests-oauthlib
 responses
 smart_open
+todoist
 virt-manager
 yarg

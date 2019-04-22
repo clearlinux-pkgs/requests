@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.21.0
-Release  : 72
+Release  : 73
 URL      : https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz
 Summary  : Python HTTP for Humans.
@@ -21,16 +21,10 @@ Requires: urllib3
 BuildRequires : buildreq-distutils3
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
+Patch1: urllib3.patch
 
 %description
-Requests: HTTP for Humansâ¢
 ==========================
-[![image](https://img.shields.io/pypi/v/requests.svg)](https://pypi.org/project/requests/)
-[![image](https://img.shields.io/pypi/l/requests.svg)](https://pypi.org/project/requests/)
-[![image](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests/)
-[![codecov.io](https://codecov.io/github/requests/requests/coverage.svg?branch=master)](https://codecov.io/github/requests/requests)
-[![image](https://img.shields.io/github/contributors/requests/requests.svg)](https://github.com/requests/requests/graphs/contributors)
-[![image](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/kennethreitz)
 
 %package license
 Summary: license components for the requests package.
@@ -60,13 +54,15 @@ python3 components for the requests package.
 
 %prep
 %setup -q -n requests-2.21.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554327758
+export SOURCE_DATE_EPOCH=1555968137
+export LDFLAGS="${LDFLAGS} -fno-lto"
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
