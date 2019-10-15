@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.22.0
-Release  : 76
+Release  : 77
 URL      : https://files.pythonhosted.org/packages/01/62/ddcf76d1d19885e8579acb1b1df26a852b03472c0e46d2b959a714c90608/requests-2.22.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/01/62/ddcf76d1d19885e8579acb1b1df26a852b03472c0e46d2b959a714c90608/requests-2.22.0.tar.gz
 Summary  : Python HTTP for Humans.
@@ -23,8 +23,6 @@ BuildRequires : buildreq-distutils3
 BuildRequires : certifi
 BuildRequires : chardet
 BuildRequires : idna
-BuildRequires : setuptools
-BuildRequires : setuptools-legacypython
 BuildRequires : urllib3
 
 %description
@@ -63,8 +61,8 @@ python3 components for the requests package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559891186
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571158095
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -82,7 +80,7 @@ python test_requests.py || :
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/requests
-cp LICENSE %{buildroot}/usr/share/package-licenses/requests/LICENSE
+cp %{_builddir}/requests-2.22.0/LICENSE %{buildroot}/usr/share/package-licenses/requests/20b8d08a3b94eaf578419402976562021c949710
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -93,7 +91,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/requests/LICENSE
+/usr/share/package-licenses/requests/20b8d08a3b94eaf578419402976562021c949710
 
 %files python
 %defattr(-,root,root,-)
