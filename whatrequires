@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
+Keras
 QGIS
 Sphinx
+WSGIProxy2
 adal
 apache-kafka
 apache-libcloud
@@ -9,6 +11,7 @@ castellan
 ceph
 certbot
 cinder
+cloudflare
 codecov
 conda
 docker-compose
@@ -25,6 +28,7 @@ jupyter-notebook-gist
 keystoneauth1
 keystonemiddleware
 koji
+krest
 locustio
 lutris
 mercurial
@@ -33,7 +37,6 @@ neutron
 nltk
 nova
 os-brick
-osinfo-db-tools
 oslo.config
 oslo.policy
 oslo.vmware
@@ -44,6 +47,7 @@ pysaml2
 python-barbicanclient
 python-coveralls
 python-designateclient
+python-digitalocean
 python-glanceclient
 python-keystoneclient
 python-magnumclient
@@ -56,6 +60,7 @@ python-swiftclient
 python-troveclient
 python-zaqarclient
 python-zeep
+pytorch
 requests-file
 requests-kerberos
 requests-mock
