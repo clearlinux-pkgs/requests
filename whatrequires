@@ -6,6 +6,7 @@ WSGIProxy2
 adal
 apache-kafka
 apache-libcloud
+astral
 azure-storage-common
 castellan
 ceph
@@ -21,6 +22,7 @@ gTTS-token
 glance_store
 gpgme
 hammock
+heat
 influxdb
 ironic
 ironic-lib
@@ -32,6 +34,7 @@ krest
 locustio
 lutris
 mercurial
+mycroft-core
 netdisco
 neutron
 nltk
@@ -40,15 +43,19 @@ os-brick
 oslo.config
 oslo.policy
 oslo.vmware
+oslosphinx
 osprofiler
+ouimeaux
 pyecobee
 pypowervm
 pysaml2
 python-barbicanclient
+python-ceilometerclient
 python-coveralls
 python-designateclient
 python-digitalocean
 python-glanceclient
+python-heatclient
 python-keystoneclient
 python-magnumclient
 python-manilaclient
@@ -69,9 +76,12 @@ requests-oauthlib
 responses
 sahara
 smart_open
+spyder-notebook
+swift
 tinyrpc
 tldextract
 todoist
 virt-manager
 vpp
 yarg
+zVMCloudConnector

@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.23.0
-Release  : 81
+Release  : 82
 URL      : https://files.pythonhosted.org/packages/f5/4f/280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915/requests-2.23.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f5/4f/280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915/requests-2.23.0.tar.gz
 Summary  : Python HTTP for Humans.
@@ -27,8 +27,17 @@ BuildRequires : urllib3
 
 %description
 <span align="center">
-        
-        <pre>
+<pre>
+<a href="https://requests.readthedocs.io/"><img src="https://raw.githubusercontent.com/psf/requests/master/ext/requests-logo.png" align="center" /></a>
+
+<div align="left">
+<p></p>
+<code> Python 3.7.4 (default, Sep  7 2019, 18:27:02)</code>
+<code> >>> <strong>import requests</strong></code>
+<code> >>> r = requests.get('https://api.github.com/repos/psf/requests')</code>
+<code> >>> r.json()["description"]</code>
+<code> 'A simple, yet elegant HTTP library.'</code>
+</div>
 
 %package license
 Summary: license components for the requests package.
@@ -51,6 +60,7 @@ python components for the requests package.
 Summary: python3 components for the requests package.
 Group: Default
 Requires: python3-core
+Provides: pypi(requests)
 
 %description python3
 python3 components for the requests package.
@@ -65,7 +75,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582148267
+export SOURCE_DATE_EPOCH=1583219205
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
