@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.23.0
-Release  : 82
+Release  : 85
 URL      : https://files.pythonhosted.org/packages/f5/4f/280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915/requests-2.23.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f5/4f/280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915/requests-2.23.0.tar.gz
 Summary  : Python HTTP for Humans.
@@ -61,6 +61,13 @@ Summary: python3 components for the requests package.
 Group: Default
 Requires: python3-core
 Provides: pypi(requests)
+Requires: pypi(cryptography)
+Requires: pypi(urllib3)
+Requires: pypi(idna)
+Requires: pypi(certifi)
+Requires: pypi(pyOpenSSL)
+Requires: pypi(PySocks)
+Requires: pypi(chardet)
 
 %description python3
 python3 components for the requests package.
@@ -75,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583219205
+export SOURCE_DATE_EPOCH=1583285778
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "

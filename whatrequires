@@ -73,6 +73,7 @@ requests-kerberos
 requests-mock
 requests-ntlm
 requests-oauthlib
+requests-toolbelt
 responses
 sahara
 smart_open
