@@ -3,12 +3,11 @@ Cura
 Keras
 QGIS
 Sphinx
+Theano
 WSGIProxy2
 adal
 astral
-azure-cli-core
 azure-core
-azure-cosmos
 azure-datalake-store
 azure-multiapi-storage
 azure-storage-common
@@ -47,6 +46,7 @@ requests-mock
 requests-ntlm
 requests-oauthlib
 requests-toolbelt
+requests-unixsocket
 responses
 salt
 smart_open
