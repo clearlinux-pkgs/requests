@@ -7,10 +7,6 @@ Theano
 WSGIProxy2
 adal
 astral
-azure-core
-azure-datalake-store
-azure-multiapi-storage
-azure-storage-common
 cchardet
 ceph
 certbot
@@ -31,7 +27,6 @@ jupyterlab_server
 koji
 lutris
 mercurial
-msal
 netdisco
 nltk
 ouimeaux

@@ -4,7 +4,7 @@
 #
 Name     : requests
 Version  : 2.25.1
-Release  : 95
+Release  : 96
 URL      : https://files.pythonhosted.org/packages/6b/47/c14abc08432ab22dc18b9892252efaf005ab44066de871e72a38d6af464b/requests-2.25.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6b/47/c14abc08432ab22dc18b9892252efaf005ab44066de871e72a38d6af464b/requests-2.25.1.tar.gz
 Summary  : Python HTTP for Humans.
@@ -24,6 +24,7 @@ BuildRequires : certifi
 BuildRequires : chardet
 BuildRequires : idna
 BuildRequires : urllib3
+Patch1: bump-idna.patch
 
 %description
 **Requests** is a simple, yet elegant HTTP library.
@@ -65,13 +66,14 @@ python3 components for the requests package.
 %prep
 %setup -q -n requests-2.25.1
 cd %{_builddir}/requests-2.25.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1608236083
+export SOURCE_DATE_EPOCH=1613870646
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
