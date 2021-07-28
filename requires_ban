@@ -1,16 +1,14 @@
 # This file contains runtime requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
-#  chardet, idna, urllib3, certifi
-
-flake8
 Sphinx
 alabaster
+chardet
 cryptography
 docutils
+flake8
 pyOpenSSL
 pytest
 pytest-cov
 pytest-xdist
 setuptools
 tox
-
